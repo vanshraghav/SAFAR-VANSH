@@ -1,18 +1,14 @@
 {
-    "builds": [
-      {
-        "src": "safar/wsgi.py",
-        "use": "@vercel/python"
-      
-        }
-    
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "safar/wsgi.py"
-      
-        }
-    
-    ]
+  "builds": [
+    {
+      "src": "safar/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "safar/wsgi.py"
+    }
+  ]
 }
