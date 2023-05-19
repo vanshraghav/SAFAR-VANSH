@@ -1,14 +1,18 @@
 {
-  "builds": [
-    {
-      "src": "safar/wsgi.py",
-      "use": "@vercel/python"
+"build": {
+"env": {
+
     }
-  ],
-  "routes": [
+},
+"builds": [{
+    "src": "safar/wsgi.py",
+    "use": "@ardnt/vercel-python-wsgi",
+    "config": { "maxLambdaSize": "15mb", "runtime": "python3.10" }
+}],
+"routes": [
     {
-      "src": "/(.*)",
-      "dest": "safar/wsgi.py"
+        "src": "/(.*)",
+        "dest": "safar/wsgi.py"
     }
-  ]
+]
 }
